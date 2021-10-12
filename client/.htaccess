@@ -1,0 +1,8 @@
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+RewriteEngine On
+RewriteRule ^setting-up-theme-(.*)$ settingtheme.php?file=$1 [L]
+RewriteRule ^Mobile-preview-(.*)$ mobileview.php?file=$1 [L]
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php72 .php .php7 .p
+</IfModule>
